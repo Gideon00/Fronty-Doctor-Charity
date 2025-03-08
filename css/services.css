@@ -1,0 +1,377 @@
+/* CS50 Nav Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', sans-serif;
+}
+
+body {
+    background-color: white;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: black;
+}
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    /* background-color: rgba(255, 255, 255, 0.95); */
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    position: relative; 
+}
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    position: absolute; /* Add this */
+    right: 20px;       /* Add this */
+    top: 50%;          /* Add this */
+    transform: translateY(-50%); /* Add this */
+    z-index: 102;      /* Add this */
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #02087D;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-outline {
+    border: 1px solid #02087D;
+    color: #02087D;
+}
+
+.btn-primary {
+    background-color: #02087D;
+    color: #fff;
+    border: 1px solid #02087D;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Main Content Styling */
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    width: 100%;
+    color: white;  /* Ensure text is visible */
+    height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Overlay with Background Image */
+.hero .overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background: url('img/auscultate.png') no-repeat top center/cover;   */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Color Overlay (Brown) */
+.hero .overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Ensuring text is on top of the overlay */
+.hero .overlay h1, 
+.hero .overlay p {
+    position: relative;
+    z-index: 2; /* Keeps text above the overlay */
+}
+.hero .overlay h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.hero .overlay p {
+    font-weight:normal;
+}
+
+/* Services */
+.services {
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+}
+
+
+
+
+.service {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.service img {
+    border-radius: 7px;
+    width: 40%;
+    height: auto;
+}
+
+.service-text {
+    padding: 20px;
+}
+
+.service-text h2 {
+    margin-bottom: 10px;
+}
+
+.last-text {
+    background: linear-gradient(to bottom, #FDF6E6, #F4FEFC);
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.all-text h2 {
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.all-text p {
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 16px;
+    color: #333;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.last-btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 12px 30px;
+    background-color: #02087D;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.last-btn:hover {
+    background-color: #000063;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.8) 100%);
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: clip-path 0.5s ease;
+        clip-path: inset(0 50% 0 50%);
+        z-index: 100;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        z-index: 101;
+    }
+    
+    .cta-buttons {
+        display: none;
+    }
+
+    /* Hamburger menu animation */
+    .mobile-menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service img {
+        width: 100%;
+    }
+}
+
+
+/* Responsiveness to mobile */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1000;
+    }
+
+    .mobile-menu {
+        display: none;
+        width: 100%;
+    }
+
+    .mobile-menu .links {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mobile-menu .buttons {
+        display: flex;
+        width: 100%;
+        padding: 0 20px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav.active .mobile-menu {
+        display: block;
+    }
+
+    nav.active {
+        padding-bottom: 20px;
+    }
+
+    /* Hamburger animation */
+    nav.active .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    nav.active .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    nav.active .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+    .service {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    .last-text {
+        background: linear-gradient(to bottom, #f9f3e6, #ffffff); /* Soft gradient */
+        text-align: center;
+        padding: 60px 20px;
+        border-radius: 10px;
+        width: 100%;
+        margin: 40px auto;
+    }
+    .all-text p {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

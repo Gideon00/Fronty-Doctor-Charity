@@ -1,0 +1,109 @@
+
+/* CS50 Nav Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', sans-serif;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: black;
+}
+
+/* Main Content Styling */
+.containss {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    padding-top: 100px; /* Add this line to account for the fixed nav */
+}
+
+/* Default Desktop Layout */
+.contact-section {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Ensure both image and form have equal height */
+.contact-image {
+    border-radius: 8px;
+    width: 50%;
+    object-fit: cover;
+}
+
+.contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* /////////////////////////////////////////////////// */
+form div {
+    margin-bottom: 15px;
+}
+
+form .btn {
+    width: 300px;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #212529;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 90%;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+#submit-btn {
+    width: 70%;
+}
+.donate-btn:hover {
+    background-color: #02087D;
+    transform: translateY(2px);
+    border-color: #02087D;
+    color: white
+}
+
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-image {
+        width: 100%;
+        height: auto; /* Allows the image to adjust naturally */
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
