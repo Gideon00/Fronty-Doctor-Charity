@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    /* Add this to push content below the fixed header */
+    padding-top: 80px; /* Adjust this value based on your header height */
+}
+
+.container-about-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    /* background: #f8f9fa; */
+    background: white;
+    overflow: hidden;
+    padding: 50px 20px;
+}
+
+/* Centered text content */
+.text-content {
+    max-width: 800px; /* Reduce width to make space for images */
+    z-index: 2;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto; /* Center the div */
+    text-align: center; /* Keep text aligned */
+}
+
+.text-content h1 {
+    font-size: 2.5rem; /* Reduce heading size */
+    color: #11277a;
+    position: relative;
+    z-index: 3;
+}
+
+.text-content p {
+    font-size: 1.2rem; /* Slightly smaller text */
+    color: #444;
+    position: relative;
+    z-index: 3;
+}
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 5px; /* Space between images */
+    width: 100%;
+}
+
+.image-row img {
+    width: 100%; /* Each image takes full column width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+
+/* Hero Images */
+
+/* Increase height for left and right images */
+.hero-image {
+    position: absolute;
+    width: 130px; /* Keep width same */
+    height: 180px; /* Increase height */
+    /* border-radius: 10px; */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover; /* Ensure images scale properly */
+}
+
+/* Floating effect */
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+/* Individual image placements with taller height */
+.img1 { top: 5%; left: 25%; height: 200px; width: 186px;} /* Top left */
+.img2 { top: 5%; right: 25%; height: 200px; width: 152px;} /* Top right */
+.img3 { bottom: 1%; left: 20%; height: 189px; width: 284px; margin-top: 40px;} /* Left bottom */
+.img4 { bottom: 1%; right: 20%; height: 246px; width: 209px; margin-top: 40px;} /* Right bottom */
+.img5 { top: 25%; left: 5%; height: 220px; width: 200px; margin-left: -40px; } /* Mid left - Taller */
+.img6 { top: 25%; right: 5%; height: 220px; width: 200px; margin-right: -40px;} /* Mid right - Taller */
+
+
+/* About section */
+.about {
+    padding: 60px 0;
+}
+
+.about h2 {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    line-height: 1.8;
+    color: #555;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+
+/* Mission section */
+.Mission {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.mission-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.mission-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.mission-indicators .indicator.active {
+    background-color: #02087D;
+}
+
+/* Smooth fade and slide animation */
+.fade-out {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+}
+
+/* Indicator animation */
+.mission-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Active indicator effect */
+.mission-indicators .indicator.active {
+    background-color: #02087D;
+    transform: scale(1.3); /* Slight scale-up for active indicator */
+    box-shadow: 0px 0px 8px rgba(58, 76, 179, 0.5); /* Soft glow effect */
+}
+
+/* Work With section */
+.work-with {
+    padding: 60px 0;
+}
+
+.work-with h2 {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.work-with-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.work-with-text {
+    flex: 1;
+    color: #555;
+    line-height: 1.8;
+}
+
+.work-with-image {
+    flex: 1;
+    text-align: right;
+}
+
+.work-with-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+/* Partners section */
+.partners {
+    padding: 60px 0;
+}
+
+.partners h2 {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.partners-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.partners-image {
+    flex: 1;
+}
+
+.partners-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.partners-text {
+    flex: 1;
+    color: #555;
+    line-height: 1.8;
+}
+
+.donate-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+}
+#about-donate {
+    color: white;
+    background-color: #02087D;
+}
+
+/* .donate-btn:hover {
+    background-color: #2c3a8c;
+    transform: translateY(-2px);
+} */
+
+
+
+/* Responsive styles */
+@media (min-width: 769px) {
+    #contact-b {
+        height: 50px;
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s;
+    }
+}
+@media (max-width: 768px) {
+    .hero-image {
+        display: none; /* Hides all images */
+    }
+    .hero {
+        height: auto; /* Adjust height dynamically */
+        display: flex;
+        flex-direction: column; /* Stack content */
+        justify-content: center;
+        align-items: center;
+        padding: 30px 15px; /* Reduce padding */
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .work-with-content,
+    .partners-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .work-with-image,
+    .partners-image {
+        text-align: center;
+    }
+
+    
+}
