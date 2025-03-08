@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Doctors Charity</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/69179aab9e.js" crossorigin="anonymous"></script>
+
+    <!-- Styles CSS -->
+    <!-- <link rel="stylesheet" href="menue.css"> -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- Favicon for the title -->
+    <link href="img/favicon.png" rel="icon">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="header-img-logo" src="img/logo.png" alt="Doctors Charity Logo">
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">☰</button>
+
+            <!-- Nav and CTA Buttons Grouped Together -->
+            <div class="nav-right">
+                <nav class="contact-home">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="containss">
+        <div class="contact-section">
+            <img src="img/gallery3.png" alt="Woman on phone" class="contact-image">
+
+            <div class="contact-form">
+
+                <div style="text-align: center;">
+                    <h1>Contact Us Today!</h1>
+                    <p style="text-indent: 20px; font-size: small;">Got Questions? Send Them In</p>
+                </div>
+
+                <form id="contactForm" method="post">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input name="fullname" type="text" id="fullName" placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input name="email" type="email" id="email" placeholder="JohnDoe@Gmail.Com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Enter Message"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="subscribe-btn"
+                        style="display: block; margin: 0 auto;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+
+            <div class="top-section">
+                <div class="footer-row1">
+                    <p>
+                        <span>Join Our Newsletter</span>
+                        <span>To Keep Up To Date With Us</span>
+                    </p>
+                    <form id="emailCollect">
+                        <div class="email-signup">
+                            <input id="dataInput" type="email" name="email" class="email-input" placeholder="Enter Your Email">
+                            <button class="subscribe-btn">Subscribe</button>
+                            <p id="responseMessage"></p> <!-- To display success/error messages -->
+                        </div>
+                    </form>
+
+                </div>
+                <div class="footer-row2">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="Logo" class="footer-logo">
+                    </a>
+                    <nav class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Our Services</a>
+                    </nav>
+                </div>
+            </div>
+            <hr>
+            <div class="boottom-section">
+                <div class="footer-b-row1">
+
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>info@doctorscharity.org</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>212 812 7554</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-fax"></i>
+                            <span>212 812 7558</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" id="single-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>207 W 110th Street Suite 19, New York, NY 10026</span>
+                    </div>
+                </div>
+                <div class="footer-b-row2">
+                    <div class="copyright">
+                        <i class="fa-regular fa-copyright"></i>
+                        <span>Copyright 2025 Doctors Charity</span>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                let formData = {
+                    fullname: event.target.fullname.value,
+                    email: event.target.email.value,
+                    message: event.target.message.value
+                };
+                console.log(formData);
+
+                fetch("https://script.google.com/macros/s/AKfycbzHRs2qgSr3QQp-EzCaVPnk3DKsixoftS_fTB31jvGe-MOzCXGto7Jzp-jXwA8hhUFVfA/exec", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    mode: "no-cors",  // 🚀 Add this to bypass CORS issues
+                    body: JSON.stringify(formData)
+                })
+                    .then(response => response.text())
+                    .then(data => alert("Thank you for reaching out!"))
+                    .catch(error => console.error("Error:", error));
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

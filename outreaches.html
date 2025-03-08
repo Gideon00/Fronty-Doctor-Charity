@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outreach - Doctors Charity</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/69179aab9e.js" crossorigin="anonymous"></script>
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/services.css">
+
+    <!-- Favicon for the title -->
+    <link href="img/favicon.png" rel="icon">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="header-img-logo" src="img/logo.png" alt="Doctors Charity Logo"> 
+                </a>
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">☰</button>
+    
+            <!-- Nav and CTA Buttons Grouped Together -->
+            <div class="nav-right">
+                <nav class="contact-home">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li class="no-desktop">
+                            <a href="contact.html" class="contact-btn">
+                                Contact Us <span class="arrow">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="cta-buttons">
+                    <a href="contact.html" id="contact-b" class="contact-btn">Contact Us <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay" style="background: url('img/main-service.png') no-repeat top center/cover;">
+            <h1>Outreaches and Global Initiatives</h1>
+            <p style="width: 60%;">
+                Our medical outreach programs are dedicated to providing vital healthcare to underserved communities. 
+                With the support of volunteers, doctors, and partners, we bring lifesaving treatments, education, and hope to those in need. 
+                Together, we are creating healthier futures and making a lasting impact across the globe. 
+                Below are some of our projects:
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+
+        <div class="service" id="medical-link">
+            <img src="img/gallery1.png" alt="Medical missions abroad">
+            <div class="service-text">
+                <h2>Medical Missions Abroad</h2>
+                <p>
+                    Our Medical Missions Abroad initiative 
+                    is dedicated to providing essential healthcare 
+                    to underserved communities worldwide. 
+                    Through this project, our volunteer doctors 
+                    and healthcare professionals travel to remote 
+                    areas where medical resources are limited, bringing 
+                    critical medical care and support to those in need.
+                </p>
+            </div>
+        </div>
+
+        <div class="service" id="microfinance-link">
+            <img src="img/finance_initiatives.png" alt="Microfinancing Initiatives">
+            <div class="service-text">
+                <h2>Microfinancing Initiatives</h2>
+                <p>
+                    At Doctors Charity, we recognize the vital link between health and nutrition. 
+                    Through our FARM (Food As Real Medicine) initiative, we support organic farming, sustainable agriculture, and microfinance in Africa. By providing resources, education, and financial aid, we improve food security, promote healthier diets, and create economic opportunities. 
+                    Our goal is to build self-sustaining ecosystems that enhance individual and community well-being.
+                </p>
+            </div>
+        </div>
+
+        <div class="service" id="Farming-link">
+            <img src="img/farming.png" alt="Farming">
+            <div class="service-text">
+                <h2>Farming Initiatives</h2>
+                <p>
+                    The FARM (Food As Real Medicine) initiative is a global outreach program by Doctors Charity, dedicated to advancing sustainable agriculture and food security. 
+                    By supporting organic farming, eco-friendly practices, and microfinance opportunities, FARM empowers communities to produce nutritious food while fostering economic independence. 
+                    Through education, resources, and hands-on support, we help build resilient agricultural systems that promote long-term health and well-being.
+                </p>
+            </div>
+        </div>
+
+        <div class="service" id="wellness-link">
+            <img src="img/wellness.png" alt="Wellness Programs">
+            <div class="service-text">
+                <h2>Wellness Programs</h2>
+                <p>
+                    Doctors Charity is committed to 
+                    improving community health through 
+                    a range of wellness programs. 
+                    Our initiatives focus on preventive 
+                    healthcare, chronic disease management, and holistic well-being. We provide free medical check-ups, nutrition counseling, mental health support, and lifestyle coaching to underserved communities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="last-text">
+        <div class="all-text">
+            <h2>Join Us in Making a Difference</h2>
+            <p>
+                Pick from any of our projects to help fund—every dollar counts. 
+                You can also donate medical equipment to support underserved communities in West Africa or participate in our annual Charity Ball in New York City.
+            </p>
+        </div>
+        <button class="last-btn">Donate Now</button>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+
+            <div class="top-section">
+                <div class="footer-row1">
+                    <p>
+                        <span>Join Our Newsletter</span>
+                        <span>To Keep Up To Date With Us</span>
+                    </p>
+                    <form id="emailCollect">
+                        <div class="email-signup">
+                            <input id="dataInput" type="email" name="email" class="email-input" placeholder="Enter Your Email">
+                            <button class="subscribe-btn">Subscribe</button>
+                            <p id="responseMessage"></p> <!-- To display success/error messages -->
+                        </div>
+                    </form>
+                </div>
+                <div class="footer-row2">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="Logo" class="footer-logo">
+                    </a>
+                    <nav class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Our Services</a>
+                    </nav>
+                </div>
+            </div>
+            <hr>
+            <div class="boottom-section">
+                <div class="footer-b-row1">
+
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>info@doctorscharity.org</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>212 812 7554</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-fax"></i>
+                            <span>212 812 7558</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" id="single-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>207 W 110th Street Suite 19, New York, NY 10026</span>
+                    </div>
+                </div>
+                <div class="footer-b-row2">
+                    <div class="copyright">
+                        <i class="fa-regular fa-copyright"></i>
+                        <span>Copyright 2025 Doctors Charity</span>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+
+       
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Doctors Charity</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/69179aab9e.js" crossorigin="anonymous"></script>
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/services.css">
+
+    <!-- Favicon for the title -->
+    <link href="img/favicon.png" rel="icon">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="header-img-logo" src="img/logo.png" alt="Doctors Charity Logo"> 
+                </a>
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">☰</button>
+    
+            <!-- Nav and CTA Buttons Grouped Together -->
+            <div class="nav-right">
+                <nav class="contact-home">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li class="no-desktop">
+                            <a href="contact.html" class="contact-btn">
+                                Contact Us <span class="arrow">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="cta-buttons">
+                    <a href="contact.html" id="contact-b" class="contact-btn">Contact Us <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay" style="background: url('img/auscultate.png') no-repeat top center/cover;">
+            <h1>Our Services</h1>
+            <p>
+                At Doctors Charity, we are committed to 
+                breaking barriers in healthcare access through 
+                our pro bono medical services. Our dedicated team of 
+                healthcare professionals provides comprehensive home visits, 
+                ensuring that individuals with limited mobility or other challenges 
+                receive high-quality medical care in the comfort of their own homes. 
+                In addition to our home care services, we extend our impact globally 
+                through medical missions abroad, bringing essential healthcare to underserved 
+                communities around the world. Our mission is to ensure that no one is left behind 
+                when it comes to receiving the medical attention they deserve.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="service" id="homecare-links">
+            <img src="img/homecare.jpg" alt="Home Care">
+            <div class="service-text">
+                <h2>Home Care</h2>
+                <p>
+                    At Doctors Charity, we provide compassionate 
+                    and professional home care for individuals who 
+                    need medical assistance in the comfort of their own homes. 
+                    Our team of skilled nurses and caregivers offers personalized 
+                    care plans to support recovery, manage chronic conditions, and 
+                    promote overall well-being. 
+                    Whether it’s post-surgery recovery or ongoing care for a loved one, 
+                    we ensure the highest standards of medical attention and comfort in a familiar environment.
+                </p>
+            </div>
+        </div>
+
+        <div class="service" id="equipment-links">
+            <img src="img/service2.png" alt="Equipment Distribution">
+            <div class="service-text">
+                <h2>Equipment Distribution</h2>
+                <p>
+                    Doctors Charity provides carefully sourced 
+                    medical supplies, such as wheelchairs, mobility aids, 
+                    and home care essentials, to economically disadvantaged 
+                    individuals and healthcare facilities struggling with resource limitations. 
+                    Throlugh our equipment distribution program, we aim to bridge the healthcare gap, 
+                    empowering patients to manage their health with dignity and independence.
+                </p>
+            </div>
+        </div>
+
+        <div class="service" id="probono-links">
+            <img src="img/proBono.png" alt="Pro Bono Services">
+            <div class="service-text">
+                <h2>Pro Bono Services</h2>
+                <p>
+                    Committed to making healthcare accessible, our team of volunteer doctors 
+                    offers free medical consultations, treatments, and minor procedures to underserved communities. 
+                    We believe that quality healthcare should be a right, not a privilege.
+                </p>
+            </div>
+        </div>
+
+    </section>
+    
+
+    <footer>
+        <div class="footer-section">
+
+            <div class="top-section">
+                <div class="footer-row1">
+                    <p>
+                        <span>Join Our Newsletter</span>
+                        <span>To Keep Up To Date With Us</span>
+                    </p>
+                    <form id="emailCollect">
+                        <div class="email-signup">
+                            <input id="dataInput" type="email" name="email" class="email-input" placeholder="Enter Your Email">
+                            <button class="subscribe-btn">Subscribe</button>
+                            <p id="responseMessage"></p> <!-- To display success/error messages -->
+                        </div>
+                    </form>
+                </div>
+                <div class="footer-row2">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="Logo" class="footer-logo">
+                    </a>
+                    <nav class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Our Services</a>
+                    </nav>
+                </div>
+            </div>
+            <hr>
+            <div class="boottom-section">
+                <div class="footer-b-row1">
+
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>info@doctorscharity.org</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>212 812 7554</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-fax"></i>
+                            <span>212 812 7558</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" id="single-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>207 W 110th Street Suite 19, New York, NY 10026</span>
+                    </div>
+                </div>
+                <div class="footer-b-row2">
+                    <div class="copyright">
+                        <i class="fa-regular fa-copyright"></i>
+                        <span>Copyright 2025 Doctors Charity</span>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>   
+
+</body>
+
+</html>
