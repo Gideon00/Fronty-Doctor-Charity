@@ -1,0 +1,230 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Mobile Menu Toggle
+    function setupMobileMenu() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    }
+
+    // Hero Slider
+    function setupHeroSlider() {
+        const slides = document.querySelectorAll('.hero .slide');
+        if (!slides.length) return;
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);
+    }
+
+    // Mission Slider
+    function setupMissionSlider() {
+        const slides = document.querySelectorAll('.mission-slide');
+        const dots = document.querySelectorAll('.dot');
+        if (!slides.length || !dots.length) return;
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);
+    }
+
+    // Gallery Slider
+    function setupGallerySlider() {
+        const track = document.querySelector('.gallery-track');
+        const slides = document.querySelectorAll('.gallery-slide');
+        const prevButton = document.querySelector('.gallery-prev');
+        const nextButton = document.querySelector('.gallery-next');
+
+        if (!track || !slides.length || !prevButton || !nextButton) return;
+
+        let currentIndex = 0;
+
+        function updateSlider() {
+            const slideWidth = slides[0].offsetWidth;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = Math.max(currentIndex - 1, 0);
+            updateSlider();
+        });
+
+        nextButton.addEventListener('click', () => {
+            const maxIndex = slides.length - Math.floor(track.offsetWidth / slides[0].offsetWidth);
+            currentIndex = Math.min(currentIndex + 1, maxIndex);
+            updateSlider();
+        });
+
+        window.addEventListener('resize', updateSlider);
+    }
+
+    // Responsive Mobile Menu
+    function setupResponsiveMenu() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (!mobileMenuBtn || !navMenu) return;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+    }
+
+    // Sections Slider
+    function setupSectionSlider() {
+        const sections = [
+            { title: "Our Mission", content: "We provide medical care and resources to those in need.", image: "img/missions.png" },
+            { title: "Our Vision", content: "Doctors and professionals serving beyond the office.", image: "img/visions.png" },
+            { title: "Legacy", content: "Encouraging a legacy of giving and service.", image: "img/legacy.jpg" },
+            { title: "Our Strategy", content: "Supporting healthcare through community-driven efforts.", image: "img/strategy.png" },
+            { title: "Volunteer", content: "Join us to expand healthcare access.", image: "img/volunteers.png" },
+            { title: "Donate", content: "Help fund medical projects and donate equipment.", image: "img/donates.png" }
+        ];
+
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        const titleElement = document.getElementById("title");
+        const contentElement = document.getElementById("content");
+        const iconElement = document.getElementById("icon-image");
+        const prevButton = document.querySelector(".prev-btn");
+        const nextButton = document.querySelector(".next-btn");
+        const indicators = document.querySelectorAll('.mission-indicators .indicator');
+
+        if (!titleElement || !contentElement || !iconElement || !prevButton || !nextButton || !indicators.length) return;
+
+        function updateContent(index) {
+            titleElement.classList.add('fade-out');
+            contentElement.classList.add('fade-out');
+            iconElement.classList.add('fade-out');
+
+            setTimeout(() => {
+                titleElement.textContent = sections[index].title;
+                contentElement.textContent = sections[index].content;
+                iconElement.src = sections[index].image;
+
+                titleElement.classList.remove('fade-out');
+                contentElement.classList.remove('fade-out');
+                iconElement.classList.remove('fade-out');
+
+                updateIndicators(index);
+            }, 400);
+        }
+
+        function updateIndicators(index) {
+            indicators.forEach((indicator, i) => indicator.classList.toggle('active', i === index));
+        }
+
+        function autoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % sections.length;
+                updateContent(currentIndex);
+            }, 4000);
+        }
+
+        nextButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % sections.length;
+            updateContent(currentIndex);
+            autoSlide();
+        });
+
+        prevButton.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+            updateContent(currentIndex);
+            autoSlide();
+        });
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateContent(currentIndex);
+                autoSlide();
+            });
+        });
+
+        updateContent(currentIndex);
+        autoSlide();
+    }
+
+    // Initialize all functions
+    setupMobileMenu();
+    setupHeroSlider();
+    setupMissionSlider();
+    setupGallerySlider();
+    setupResponsiveMenu();
+    setupSectionSlider();
+
+
+    document.getElementById('emailCollect').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        let formData = {
+            email: event.target.email.value
+        };
+        console.log(formData);
+
+        fetch("https://script.google.com/macros/s/AKfycbxkeK7JLj5H_UYXX3kTQasOLPVKfKq62kt4dlDFr6_2-ecXxlAG3HDJMfthPHXTGfCtCQ/exec", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            mode: "no-cors",  // 🚀 Add this to bypass CORS issues
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.text())
+            .then(data => alert("Welcome on board!"))
+            .catch(error => console.error("Error:", error));
+    });
+    
+});
